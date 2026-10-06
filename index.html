@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Verdão News — notícias, jogos, resultados e informações do Coritiba para o torcedor Coxa-Branca."
+    >
+
+    <meta name="theme-color" content="#063d25">
+
+    <title>Verdão News | Portal Coxa-Branca</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <div class="topbar">
+            <div class="container topbar-content">
+
+                <span>
+                    🟢 Portal independente do torcedor Coxa-Branca
+                </span>
+
+                <span id="currentDate"></span>
+
+            </div>
+        </div>
+
+        <div class="header-main">
+
+            <div class="container header-content">
+
+                <a href="#home" class="brand">
+
+                    <div class="brand-crest">
+                        CFC
+                    </div>
+
+                    <div class="brand-text">
+
+                        <strong>VERDÃO</strong>
+
+                        <span>NEWS</span>
+
+                    </div>
+
+                </a>
+
+                <nav class="desktop-nav" id="desktopNav">
+
+                    <a class="active" href="#home">
+                        Início
+                    </a>
+
+                    <a href="#noticias">
+                        Notícias
+                    </a>
+
+                    <a href="#jogos">
+                        Jogos
+                    </a>
+
+                    <a href="#classificacao">
+                        Classificação
+                    </a>
+
+                    <a href="#historia">
+                        Clube
+                    </a>
+
+                </nav>
+
+                <div class="header-actions">
+
+                    <button
+                        class="icon-button"
+                        id="themeButton"
+                        aria-label="Alterar tema"
+                    >
+                        ◐
+                    </button>
+
+                    <button
+                        class="menu-button"
+                        id="menuButton"
+                        aria-label="Abrir menu"
+                        aria-expanded="false"
+                    >
+                        ☰
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+
+            <a href="#home">Início</a>
+            <a href="#noticias">Notícias</a>
+            <a href="#jogos">Jogos</a>
+            <a href="#classificacao">Classificação</a>
+            <a href="#historia">Clube</a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-background"></div>
+
+            <div class="container hero-content">
+
+                <div class="hero-copy">
+
+                    <div class="eyebrow">
+                        <span></span>
+                        PORTAL DO TORCEDOR
+                    </div>
+
+                    <h1>
+                        A paixão pelo
+                        <em>Verdão</em>
+                        começa aqui.
+                    </h1>
+
+                    <p>
+                        Notícias, jogos, resultados, classificação,
+                        análises e tudo sobre o Coritiba em um único
+                        lugar.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#noticias"
+                            class="button button-primary"
+                        >
+                            Últimas notícias
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="#jogos"
+                            class="button button-ghost"
+                        >
+                            Próximo jogo
+                        </a>
+
+                    </div>
+
+                    <div class="hero-stats">
+
+                        <div>
+                            <strong>1909</strong>
+                            <span>Fundação</span>
+                        </div>
+
+                        <div>
+                            <strong>🟢</strong>
+                            <span>Coxa-Branca</span>
+                        </div>
+
+                        <div>
+                            <strong>PR</strong>
+                            <span>Curitiba</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Próximo jogo -->
+
+                <div class="match-card">
+
+                    <div class="match-card-header">
+
+                        <span>PRÓXIMO JOGO</span>
+
+                        <span class="live-dot">
+                            EM BREVE
+                        </span>
+
+                    </div>
+
+                    <div class="match-date">
+
+                        <strong id="matchDate">
+                            DATA A CONFIRMAR
+                        </strong>
+
+                        <span id="matchTime">
+                            HORÁRIO A CONFIRMAR
+                        </span>
+
+                    </div>
+
+                    <div class="teams">
+
+                        <div class="team">
+
+                            <div class="team-badge">
+                                CFC
+                            </div>
+
+                            <strong>Coritiba</strong>
+
+                            <small>Mandante</small>
+
+                        </div>
+
+                        <div class="versus">
+                            <span>VS</span>
+                        </div>
+
+                        <div class="team">
+
+                            <div class="team-badge opponent">
+                                ⚽
+                            </div>
+
+                            <strong>Adversário</strong>
+
+                            <small>A definir</small>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="match-info"
+                        onclick="showToast('Informações da partida em breve.')"
+                    >
+                        Ver informações
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TICKER
+        ====================================================== -->
+
+        <div class="news-ticker">
+
+            <div class="container ticker-content">
+
+                <span class="ticker-label">
+                    🔥 DESTAQUE
+                </span>
+
+                <div class="ticker-text">
+                    Acompanhe todas as novidades do Verdão.
+                </div>
+
+                <button
+                    id="nextTicker"
+                    aria-label="Próxima notícia"
+                >
+                    →
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             NOTÍCIAS
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="noticias"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-kicker">
+                            INFORMAÇÃO
+                        </span>
+
+                        <h2>
+                            Últimas notícias
+                        </h2>
+
+                    </div>
+
+                    <div class="section-tools">
+
+                        <button
+                            class="filter active"
+                            data-filter="all"
+                        >
+                            Todas
+                        </button>
+
+                        <button
+                            class="filter"
+                            data-filter="futebol"
+                        >
+                            Futebol
+                        </button>
+
+                        <button
+                            class="filter"
+                            data-filter="clube"
+                        >
+                            Clube
+                        </button>
+
+                        <button
+                            class="filter"
+                            data-filter="torcida"
+                        >
+                            Torcida
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="news-grid"
+                    id="newsGrid"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             JOGO EM DESTAQUE
+        ====================================================== -->
+
+        <section
+            class="featured-match section-dark"
+            id="jogos"
+        >
+
+            <div class="container">
+
+                <div class="section-heading light">
+
+                    <div>
+
+                        <span class="section-kicker">
+                            AGENDA
+                        </span>
+
+                        <h2>
+                            Próximo confronto
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="featured-match-card">
+
+                    <div class="featured-team">
+
+                        <div class="big-badge">
+                            CFC
+                        </div>
+
+                        <h3>Coritiba</h3>
+
+                        <span>Mandante</span>
+
+                    </div>
+
+
+                    <div class="featured-center">
+
+                        <span class="match-label">
+                            PRÓXIMA PARTIDA
+                        </span>
+
+                        <strong>VS</strong>
+
+                        <div class="countdown">
+
+                            <div>
+                                <strong id="days">--</strong>
+                                <span>dias</span>
+                            </div>
+
+                            <div>
+                                <strong id="hours">--</strong>
+                                <span>horas</span>
+                            </div>
+
+                            <div>
+                                <strong id="minutes">--</strong>
+                                <span>min</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="featured-team">
+
+                        <div class="big-badge opponent-badge">
+                            ⚽
+                        </div>
+
+                        <h3>Adversário</h3>
+
+                        <span>A definir</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CLASSIFICAÇÃO
+        ====================================================== -->
+
+        <section
+            class="section"
+            id="classificacao"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-kicker">
+                            CAMPEONATO
+                        </span>
+
+                        <h2>
+                            Classificação
+                        </h2>
+
+                    </div>
+
+                    <span class="update-label">
+                        Atualização demonstrativa
+                    </span>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>#</th>
+
+                                <th>Clube</th>
+
+                                <th>PTS</th>
+
+                                <th>J</th>
+
+                                <th>V</th>
+
+                                <th>E</th>
+
+                                <th>D</th>
+
+                                <th>SG</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="standingsBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             HISTÓRIA
+        ====================================================== -->
+
+        <section
+            class="history"
+            id="historia"
+        >
+
+            <div class="container history-content">
+
+                <div class="history-copy">
+
+                    <span class="section-kicker">
+                        A HISTÓRIA
+                    </span>
+
+                    <h2>
+                        Mais que um clube.
+                        <br>
+                        Uma identidade.
+                    </h2>
+
+                    <p>
+                        O Coritiba faz parte da história do futebol
+                        brasileiro e da identidade esportiva de
+                        Curitiba. O Verdão carrega uma tradição
+                        construída por gerações de torcedores.
+                    </p>
+
+                    <button
+                        class="button button-primary"
+                        id="historyButton"
+                    >
+                        Conheça a história
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+
+                <div class="history-emblem">
+
+                    <div class="history-ring">
+
+                        <span>CFC</span>
+
+                    </div>
+
+                    <p>
+                        COXA-BRANCA
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             NEWSLETTER
+        ====================================================== -->
+
+        <section class="newsletter">
+
+            <div class="container newsletter-content">
+
+                <div>
+
+                    <span class="section-kicker">
+                        FIQUE ATUALIZADO
+                    </span>
+
+                    <h2>
+                        Notícias do Verdão
+                        direto para você.
+                    </h2>
+
+                    <p>
+                        Receba as principais novidades do
+                        Coritiba.
+                    </p>
+
+                </div>
+
+
+                <form id="newsletterForm">
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Seu melhor e-mail"
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        class="button button-primary"
+                    >
+                        Quero receber
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         MODAL
+    ====================================================== -->
+
+    <div
+        class="modal"
+        id="modal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-overlay"></div>
+
+        <div
+            class="modal-content"
+            role="dialog"
+            aria-modal="true"
+        >
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                aria-label="Fechar"
+            >
+                ×
+            </button>
+
+            <span
+                class="section-kicker"
+                id="modalCategory"
+            >
+                NOTÍCIA
+            </span>
+
+            <h2 id="modalTitle">
+                Título
+            </h2>
+
+            <p id="modalText">
+                Conteúdo
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        class="toast"
+        id="toast"
+    ></div>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <a href="#home" class="brand footer-brand">
+
+                    <div class="brand-crest">
+                        CFC
+                    </div>
+
+                    <div class="brand-text">
+
+                        <strong>VERDÃO</strong>
+
+                        <span>NEWS</span>
+
+                    </div>
+
+                </a>
+
+                <p>
+                    Informação e paixão para quem
+                    vive o Coritiba.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Navegação</h3>
+
+                <a href="#noticias">Notícias</a>
+                <a href="#jogos">Jogos</a>
+                <a href="#classificacao">Tabela</a>
+                <a href="#historia">História</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Redes sociais</h3>
+
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+                <a href="#">Facebook</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Portal</h3>
+
+                <p>
+                    Conteúdo demonstrativo.
+                </p>
+
+                <p>
+                    Feito para a torcida Coxa-Branca.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <span>
+                    © 2026 Verdão News
+                </span>
+
+                <span>
+                    Portal independente
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
